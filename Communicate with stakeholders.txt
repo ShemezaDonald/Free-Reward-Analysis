@@ -1,0 +1,44 @@
+
+Subject: Data Quality Issues and Key Findings from Initial Exploration
+
+
+Hi Product Manager,
+
+
+I have completed an initial exploration of the dataset and identified a few key points and potential issues:
+
+I. Key Data Quality Issues:
+
+    1. Duplicate and Logical Errors:
+
+	  - 25,560 duplicate RECEIPT_IDs (over 50% of records) suggest potential data quality issues or application misuse.
+	  - 94 records show SCAN_DATE occurring before PURCHASE_DATE, indicating data entry errors.
+
+     2. Missing and Inconsistent Values:
+
+           Key columns like STATE, LANGUAGE, GENDER, CATEGORY_1, MANUFACTURER, and BRAND contain missing (NaN) values, impacting user segmentation and product analysis.
+
+
+Observation: The high number of duplicate RECEIPT_IDs constitutes a significant portion of the total dataset. This anomaly requires further investigation to determine if it is:
+		- An expected behavior in the app, such as resubmission of receipts by users,
+		- A potential data quality issue resulting from data processing errors,
+		- Or an indicator of potential abuse or fraudulent activity.
+
+II. Interesting Trend:
+
+           From my preliminary analysis, Millennials contribute the highest percentage of sales in the Health & Wellness category at 43.06%, followed by Baby Boomers at 40.94%, and Gen X at 32.98%. The Silent Generation showed no contribution in this category.
+
+
+III. Request for Action:
+         
+	     On the duplicate RECEIPT_IDs issue, it would be helpful to:
+
+		- Clarify expected app behavior: Obtain insights from the product teams regarding how receipts are processed and whether duplicate RECEIPT_IDs are typical.
+		- Review data processing pipelines: Verify if there are any known data ingestion or duplication issues in the current data workflow.
+
+	     Understanding these aspects will allow us to assess the validity of the data and take appropriate measures to clean and prepare the data for more accurate analysis.
+
+
+
+Best,
+Aymar Donald
